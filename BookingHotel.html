@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesian Tourism - Hotel Booking</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hotel Booking</h1>
+            <div class="nav">
+                <a href="#home">Home</a>
+                <a href="#kebudayaan">Kebudayaan</a>
+                <a href="#tempat-wisata">Tempat Wisata</a>
+                <a href="#hotel">Hotel</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+        </div>
+
+        <div id="hotel-booking" class="section">
+            <h2>Daftar Hotel Favorit</h2>
+
+            <div class="hotel">
+                <h3>The Ritz-Carlton Bali</h3>
+                <p><strong>Fasilitas:</strong> Kolam renang, spa, pusat kebugaran, restoran, akses pantai pribadi</p>
+                <p><strong>Harga per Malam:</strong> Rp 3.000.000</p>
+                <button onclick="bookHotel('The Ritz-Carlton Bali', 3000000)">Book Now</button>
+            </div>
+
+            <div class="hotel">
+                <h3>Hotel Indonesia Kempinski Jakarta</h3>
+                <p><strong>Fasilitas:</strong> Kolam renang, spa, pusat kebugaran, restoran, bar, pusat bisnis</p>
+                <p><strong>Harga per Malam:</strong> Rp 2.500.000</p>
+                <button onclick="bookHotel('Hotel Indonesia Kempinski Jakarta', 2500000)">Book Now</button>
+            </div>
+
+            <div class="hotel">
+                <h3>The Oberoi Lombok</h3>
+                <p><strong>Fasilitas:</strong> Kolam renang, spa, pusat kebugaran, restoran, akses pantai pribadi</p>
+                <p><strong>Harga per Malam:</strong> Rp 4.000.000</p>
+                <button onclick="bookHotel('The Oberoi Lombok', 4000000)">Book Now</button>
+            </div>
+
+            <div class="hotel">
+                <h3>Ayana Resort and Spa Bali</h3>
+                <p><strong>Fasilitas:</strong> Kolam renang, spa, pusat kebugaran, restoran, bar, lapangan golf</p>
+                <p><strong>Harga per Malam:</strong> Rp 3.500.000</p>
+                <button onclick="bookHotel('Ayana Resort and Spa Bali', 3500000)">Book Now</button>
+            </div>
+        </div>
+
+        <a href="hotel.html" class="button">Back</a>
+
+        <div id="booking-form" class="section" style="display:none;">
+            <h2>Booking Form</h2>
+            <form onsubmit="return processBooking()">
+                <div>
+                    <label for="hotel-name">Hotel:</label>
+                    <input type="text" id="hotel-name" name="hotel-name" readonly>
+                </div>
+                <div>
+                    <label for="price-per-night">Harga per Malam:</label>
+                    <input type="text" id="price-per-night" name="price-per-night" readonly>
+                </div>
+                <div>
+                    <label for="nights">Jumlah Malam:</label>
+                    <input type="number" id="nights" name="nights" min="1" required>
+                </div>
+                <div>
+                    <label for="total-price">Total Harga:</label>
+                    <input type="text" id="total-price" name="total-price" readonly>
+                </div>
+                <div>
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <button type="submit">Book Now</button>
+                    <button type="button" onclick="cancelBooking()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
